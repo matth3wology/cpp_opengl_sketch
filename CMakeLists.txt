@@ -40,6 +40,17 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(glad)
 
 # -----------------------------
+# Fetch GLM (for OpenGL math functions)
+# -----------------------------
+FetchContent_Declare(
+    glm
+    GIT_REPOSITORY https://github.com/g-truc/glm.git
+    GIT_TAG 1.0.1
+)
+
+FetchContent_MakeAvailable(glm)
+
+# -----------------------------
 # Set build type
 # -----------------------------
 if(NOT CMAKE_BUILD_TYPE)
@@ -79,5 +90,6 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     OpenGL::GL
     glfw
     glad
+    glm
 )
 
