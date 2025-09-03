@@ -61,7 +61,6 @@ endif()
 # Find required packages
 # -----------------------------
 find_package(OpenGL REQUIRED)
-find_package(Threads REQUIRED)
 
 # -----------------------------
 # Source files
@@ -86,7 +85,6 @@ target_include_directories(${PROJECT_NAME} PRIVATE
 # Link libraries
 # -----------------------------
 target_link_libraries(${PROJECT_NAME} PRIVATE
-    Threads::Threads
     OpenGL::GL
     glfw
     glad
